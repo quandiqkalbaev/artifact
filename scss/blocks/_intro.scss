@@ -1,0 +1,246 @@
+.intro {
+  margin-top: 100px;
+  position: relative;
+
+  &__text-shadow {
+    display: block;
+    position: absolute;
+    width: 700px;
+    left: 0;
+    top: 0px;
+    font-size: 144px;
+    color: rgba(255, 255, 255, 0.012);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.056;
+    text-align: left;
+    text-shadow: 0px 0px 38px rgba(0, 0, 0, 0.05);
+
+    // z-index: -1;
+  }
+  &__inner {
+    display: flex;
+    gap: 90px;
+  }
+  &__left,
+  &__right {
+    flex-basis: 50%;
+  }
+  &__left {
+    background-image: url("../../images/introIMG.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &::after {
+      width: 300px;
+      height: 250px;
+      display: block;
+      position: absolute;
+      right: 20px;
+      bottom: -100px;
+      content: "";
+      background-image: url("../../images/intro-micros.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 300px 250px;
+      z-index: -1;
+    }
+  }
+  &__text-top {
+    font-size: 20px;
+    font-weight: 700;
+    color: $primary;
+    text-transform: uppercase;
+    text-align: left;
+  }
+  &__title {
+    font-size: 44px;
+    font-weight: 800;
+  }
+  &__subtitle {
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  &__price {
+    margin-top: 35px;
+    font-size: 33px;
+    font-weight: 700;
+
+    span {
+      font-size: 23px;
+      color: rgba(255, 255, 255, 0.09);
+
+      margin-left: 10px;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        transform-origin: 0 calc(100% - 1px);
+        transform: rotate(-15deg);
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+  &__btn {
+    margin-top: 40px;
+  }
+  &__text-bottom {
+    margin-top: 40px;
+    font-size: 15px;
+    color: $white;
+  }
+  &__list {
+    margin-top: 30px;
+    display: flex;
+  }
+  &__item {
+    font-size: 15px;
+    color: $primary;
+    background-image: linear-gradient(to right, $primary 60%, rgba(255, 255, 255, 0) 0%);
+    background-position: bottom center;
+    background-size: 7px 1px;
+    background-repeat: repeat-x;
+    display: block;
+    padding: 3px 0;
+    &:hover {
+      color: #ffe8d6;
+      background-image: linear-gradient(to right, #ffe8d6 60%, rgba(255, 255, 255, 0) 0%);
+    }
+  }
+  &__item + &__item {
+    margin-left: 30px;
+  }
+}
+@media only screen and (max-width: 1260px) {
+  .intro {
+    &__right {
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .intro {
+    margin-top: 60px; //mobile 30px
+    &__left,
+    &__right {
+      flex-basis: 50%;
+    }
+
+    &__text-top {
+      font-size: 17px; //mobile 14px
+    }
+    &__title {
+      margin-top: 15px;
+      font-size: 30px; // mobile 24px
+    }
+    &__subtitle {
+      margin-top: 20px;
+      font-size: 17px; // mobile 14px;
+    }
+    &__price {
+      margin-top: 20px;
+      font-size: 30px; // 27px
+      span {
+        font-size: 20px;
+      }
+    }
+    &__btn {
+      margin-top: 20px;
+    }
+    &__text-bottom {
+      margin-top: 20px;
+    }
+    &__list {
+      margin-top: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .intro {
+    margin-top: 30px;
+    text-align: center;
+    &__text-shadow {
+      width: 400px;
+      font-size: 74px;
+    }
+    &__inner {
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+    &__left {
+      min-height: 200px;
+    }
+    &__text-top {
+      text-align: center;
+      font-size: 14px;
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__subtitle {
+      font-size: 14px;
+    }
+    &__price {
+      font-size: 27px;
+    }
+    &__btn {
+      margin: 20px auto 0;
+    }
+    &__list {
+      justify-content: center;
+    }
+  }
+}
+@media only screen and (max-width: 480px) {
+  .intro {
+    margin-top: 30px;
+    text-align: center;
+    &__text-shadow {
+      width: 200px;
+      font-size: 54px;
+    }
+    &__inner {
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+    &__left {
+      min-height: 200px;
+    }
+    &__text-top {
+      text-align: center;
+      font-size: 14px;
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__subtitle {
+      font-size: 14px;
+    }
+    &__price {
+      font-size: 27px;
+    }
+    &__btn {
+      margin: 20px auto 0;
+    }
+    &__list {
+      justify-content: center;
+    }
+  }
+}

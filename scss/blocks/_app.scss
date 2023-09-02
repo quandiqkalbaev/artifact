@@ -1,0 +1,203 @@
+.app {
+  margin-top: 140px;
+  .container {
+    max-width: 1170px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__bottom {
+    margin-top: 60px;
+    position: relative;
+  }
+
+  &__slider {
+    overflow: hidden;
+    &-prev,
+    &-next {
+      cursor: pointer;
+
+      svg path {
+        transition: all 0.3s;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          svg path {
+            stroke: $white;
+          }
+        }
+      }
+    }
+
+    &-prev {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -50px;
+    }
+
+    &-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -50px;
+    }
+
+    .swiper-pagination {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-size: 38px;
+    font-weight: 700;
+    text-align: left;
+    position: relative;
+    &::after {
+      position: absolute;
+      display: block;
+      content: "";
+      right: calc(100% + 33px);
+      top: 25%;
+      width: 107px;
+      height: 1px;
+      background-color: $white;
+    }
+    span {
+      color: $primary;
+      display: block;
+    }
+  }
+
+  &__subtitle {
+    max-width: 440px;
+    font-size: 17px;
+    line-height: 1.588;
+    text-align: right;
+  }
+
+  &__link {
+    display: flex;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.055);
+  }
+
+  &__right {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    &-name {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 14px;
+      color: $white;
+      font-weight: 700;
+      text-align: left;
+    }
+    &-company {
+      margin-top: 5px;
+      font-size: 12px;
+      color: $white;
+      text-align: left;
+    }
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .app {
+    margin-top: 90px;
+    &__title {
+      &::after {
+        width: 50px;
+        right: calc(100% + 10px);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1290px) {
+  .app {
+    &__title {
+      &::after {
+        display: none;
+      }
+    }
+
+    &__slider {
+      padding-bottom: 55px;
+      position: relative;
+      overflow: hidden;
+
+      &-prev,
+      &-next {
+        display: none;
+      }
+
+      .swiper-pagination {
+        width: 150px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-bullet-active-next,
+        &-bullet-active-prev {
+          width: 9px;
+          height: 9px;
+          transform: scale(1);
+          background: #424241;
+        }
+
+        &-bullet-active-next-next,
+        &-bullet-active-prev-prev {
+          width: 7px;
+          height: 7px;
+          transform: scale(1);
+          background: #424241;
+        }
+
+        &-bullet-active {
+          width: 15px;
+          height: 15px;
+          background: $primary;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .app {
+    margin-top: 115px;
+    &__top {
+      flex-direction: column;
+    }
+    &__title {
+      text-align: center;
+      font-size: 32px;
+    }
+    &__subtitle {
+      text-align: center;
+      max-width: 380px;
+      font-size: 14px;
+    }
+    &__bottom {
+      margin-top: 30px;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .app {
+    margin-top: 90px;
+  }
+}
