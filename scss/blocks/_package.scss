@@ -20,6 +20,14 @@
     margin-left: auto;
     grid-row: 1 / 4;
     grid-column: 2 / 3;
+
+    background: rgb(218, 121, 23);
+    background: radial-gradient(
+      circle,
+      rgba(218, 121, 23, 0.2) 0%,
+      rgba(255, 255, 255, 0) 60%
+    );
+    background-position-y: 50px;
   }
 
   &__title {
@@ -124,7 +132,7 @@
 
 @media only screen and (max-width: 1440px) {
   .package {
-    margin-top: 90px;
+    margin-top: 0;
     &__title {
       &::after {
         width: 50px;

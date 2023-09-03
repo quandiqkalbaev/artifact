@@ -26,18 +26,6 @@
     &-prev,
     &-next {
       cursor: pointer;
-
-      svg path {
-        transition: all 0.3s;
-      }
-
-      @media (hover: hover) {
-        &:hover {
-          svg path {
-            stroke: $white;
-          }
-        }
-      }
     }
 
     &-prev {
@@ -199,5 +187,16 @@
 @media only screen and (max-width: 767px) {
   .app {
     margin-top: 90px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .app {
+    margin: 0;
+    padding-top: 90px;
+    background-image: url("../images/connection-bggg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -30px -50px;
   }
 }

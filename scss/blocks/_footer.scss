@@ -19,7 +19,7 @@
         content: "";
         background-color: $primary;
         border-radius: 50%;
-        background-image: url("../../images/arrow-top.png");
+        background-image: url("../images/arrow-top.png");
         background-position: center center;
         background-repeat: no-repeat;
       }
@@ -46,6 +46,7 @@
   &__right {
     display: flex;
     align-items: center;
+    margin-left: auto;
     &-mail {
       font-size: 16px;
       line-height: 1.2;
@@ -133,6 +134,20 @@
     }
   }
 }
+
+@media only screen and (max-width: 1200px) {
+  .footer {
+    &__right {
+      flex-direction: column-reverse;
+      &-tel {
+        font-size: 15px;
+      }
+      &-mail {
+        margin-top: 10px;
+      }
+    }
+  }
+}
 @media only screen and (max-width: 767px) {
   .footer {
     &__top {
@@ -154,6 +169,7 @@
       }
     }
     &__right {
+      margin-left: 0;
       margin-top: 10px;
       flex-direction: column;
       &-tel {

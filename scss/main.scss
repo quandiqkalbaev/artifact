@@ -15,12 +15,18 @@ body {
   scroll-behavior: smooth;
   z-index: 99;
 }
+
 body {
-  background: url("../images/body-bg.png"), #111111;
+  background: url("../images/topbg.png"), #111111;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 0 0;
 }
-
+@media only screen and (max-width: 640px) {
+  body {
+    background-position: -400px 0;
+  }
+}
 .no-scroll {
   overflow: hidden;
 }
@@ -53,7 +59,11 @@ body {
   color: #111111;
   text-align: center;
   border-radius: 25px;
-  background: -webkit-linear-gradient(90deg, rgb(229, 179, 141) 0%, rgb(189, 131, 90) 100%);
+  background: -webkit-linear-gradient(
+    90deg,
+    rgb(229, 179, 141) 0%,
+    rgb(189, 131, 90) 100%
+  );
   box-shadow: 0px 13px 18px 0px rgba(241, 193, 155, 0.13);
 
   img {
