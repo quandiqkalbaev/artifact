@@ -147,7 +147,10 @@
         top: -30px;
         right: 0;
         border-radius: 10px;
-        background: $primary;
+        background-image: -moz-linear-gradient( 90deg, rgb(229,179,141) 0%, rgb(189,131,90) 100%);
+        background-image: -webkit-linear-gradient( 90deg, rgb(229,179,141) 0%, rgb(189,131,90) 100%);
+        background-image: -ms-linear-gradient( 90deg, rgb(229,179,141) 0%, rgb(189,131,90) 100%);
+        box-shadow: 0px 13px 18px 0px rgba(241, 193, 155, 0.13);
         z-index: -1;
       }
 

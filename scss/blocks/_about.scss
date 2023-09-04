@@ -29,6 +29,8 @@
     }
 
     &-prev {
+      width: 43px;
+      height: 43px;
       padding: 10px;
       position: absolute;
       top: 50%;
@@ -39,9 +41,19 @@
       border-bottom-right-radius: 10px;
       background: #1b1918;
       z-index: 2;
+      background-image: url("../../images/left-arrow-gold.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      transition: all 200ms linear;
+      &:hover {
+        background-color: $primary;
+        background-image: url("../../images/left-arrow-black.png");
+      }
     }
 
     &-next {
+      width: 43px;
+      height: 43px;
       padding: 10px;
       position: absolute;
       top: 50%;
@@ -52,6 +64,14 @@
       border-bottom-left-radius: 10px;
       background: #1b1918;
       z-index: 2;
+       background-image: url("../../images/right-arrow-gold.png");
+      background-position: center center;
+      background-repeat: no-repeat;
+      transition: all 200ms linear;
+      &:hover {
+        background-color: $primary;
+        background-image: url("../../images/right-arrow-black.png");
+      }
     }
 
     .swiper-pagination {
